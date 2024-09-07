@@ -1,22 +1,24 @@
-import React, { createContext, useState, useEffect, useContext } from 'react';
+// eslint-disable-next-line no-unused-vars
+import React, { createContext, useState, useContext } from "react";
 
 // Criação do contexto
 const AuthContext = createContext();
 
 // Provedor do contexto
+// eslint-disable-next-line react/prop-types
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
-    return localStorage.getItem('isAuthenticated') === 'true'
+    return localStorage.getItem("isAuthenticated") === "true";
   });
 
   const login = () => {
     setIsAuthenticated(true);
-    localStorage.setItem('isAuthenticated', 'true')
+    localStorage.setItem("isAuthenticated", "true");
   };
 
   const logout = () => {
-    setIsAuthenticated(false)
-    localStorage.removeItem('isAuthenticated')
+    setIsAuthenticated(false);
+    localStorage.removeItem("isAuthenticated");
   };
 
   return (
@@ -27,5 +29,5 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => {
-  return useContext(AuthContext)
+  return useContext(AuthContext);
 };
