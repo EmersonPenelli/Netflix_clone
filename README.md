@@ -33,7 +33,7 @@
 - Executar o projeto
     <pre><code>npm run dev</code></pre>
 
-- Abrir o navegador na porta informada no terminal
+ ✔️ **Login: admin@admin  Senha: 12345**
 
 ## 💻 O projeto pode ser vizualizado acessando o seguinte link
 
